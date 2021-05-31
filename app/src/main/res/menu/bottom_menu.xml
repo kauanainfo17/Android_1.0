@@ -5,5 +5,5 @@
     <item
         android:id="@+id/inicioFragment"
         android:icon="@android:drawable/ic_menu_info_details"
-        android:title="Inicio" />
+        android:title="@string/home" />
 </menu>
