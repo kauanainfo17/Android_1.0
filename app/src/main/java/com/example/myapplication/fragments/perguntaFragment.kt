@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.adapters.PerguntaAdapter
-import kotlinx.android.synthetic.main.fragment_pergunta.*
+import kotlinx.android.synthetic.main.fragment_pergunta.view.*
 
 class perguntaFragment : Fragment() {
 
@@ -17,13 +17,14 @@ class perguntaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        listQuestao.adapter = PerguntaAdapter()
-        listQuestao.layoutManager =
+        val view = inflater.inflate(R.layout.fragment_pergunta, container, false)
+
+        view.listQuestao.adapter = PerguntaAdapter(applicationContext)
+        view.listQuestao.layoutManager =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
 
 
-        return inflater.inflate(R.layout.fragment_pergunta, container, false)
+        return view
     }
-
 
 }

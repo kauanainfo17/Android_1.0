@@ -18,10 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setupWithNavController(findNavController(R.id.navHostFragment))
 
-
-
-
-
     }
 }
 
